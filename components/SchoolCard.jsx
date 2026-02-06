@@ -37,6 +37,7 @@ import {
   SCORE_TOOLTIP,
   ENI_TOOLTIP,
 } from "../constants";
+import { Link } from "react-router-dom";
 
 const SchoolCard = ({
   school,
@@ -417,17 +418,10 @@ const SchoolCard = ({
               </>
             )}
           </button>
-          <button
-            className="action-btn-icon"
-            onClick={() =>
-              window.open(
-                `/school/${school.dbn}`,
-                "_blank",
-                "noopener,noreferrer",
-              )
-            }
-          >
-            <ArrowBigRight size={14} />
+          <button className="action-btn-icon">
+            <Link to={`/school/${school.dbn}`} target="_blank" className="link">
+              <ArrowBigRight size={14} />
+            </Link>
           </button>
         </div>
       </div>
