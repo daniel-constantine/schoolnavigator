@@ -1,0 +1,46 @@
+/* Grid layout with responsive columns */
+.component-score-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.score-card-container {
+  padding-top: 1rem;
+}
+
+/* Progress bar - unique component */
+.score-card-container-progress-bar-background {
+  position: relative;
+  height: 0.5rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 9999px;
+  background-color: hsl(var(--secondary));
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.score-card-container-progress-bar-value {
+  height: 100%;
+  width: 100%;
+  background-color: hsl(var(--primary));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+
+/* Description with relaxed line-height */
+.score-card-container-text {
+  font-size: 0.75rem;
+  line-height: 1.625;
+  color: hsl(var(--muted-foreground));
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .component-score-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

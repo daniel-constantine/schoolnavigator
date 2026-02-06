@@ -1,0 +1,464 @@
+/* Compare Page */
+
+.compare-page {
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.compare-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.compare-schools-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.btn-clear-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Minimalist "Clear All" button */
+.btn-clear {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid #d0d0d0;
+  color: white;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.btn-clear:hover {
+  color: white;
+  border-color: #999;
+}
+
+.btn-clear:active {
+  color: white;
+  border-color: #666;
+}
+
+.btn-clear:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.comparison-table {
+  background: #242424;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.comparison-table h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.comparison-table th:nth-of-type(n + 2) {
+  text-align: center;
+}
+
+.comparison-table th {
+  background: #1a1a1a;
+  font-weight: 600;
+}
+
+.metric-label {
+  font-weight: 600;
+}
+
+.row-center {
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+.best-value {
+  background: #10b98120;
+  font-weight: 600;
+  color: #10b981;
+}
+
+.best-indicator {
+  margin-left: 0.5rem;
+  color: #f59e0b;
+}
+
+.compare-page-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compare-page-rating-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-size: 1rem;
+}
+
+.compare-school-info {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.compare-school-column {
+  background: #242424;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.compare-empty {
+  text-align: center;
+  padding: 4rem;
+  color: #666;
+}
+
+.add-school-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  border: 2px dashed #333;
+  background: transparent;
+}
+
+.comparison-programs {
+  margin-top: 2rem;
+}
+
+.comparison-programs h3 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+/* Modal */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #242424;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #333;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.modal-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.modal-search {
+  width: 100%;
+  padding: 0.75rem;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.school-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #1a1a1a;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.school-option:hover:not(.disabled) {
+  background: #2a2a2a;
+}
+
+.school-option.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.school-option h4 {
+  margin: 0 0 0.25rem 0;
+}
+
+.school-option p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.school-rating-compare {
+  padding: 0.5rem 1rem;
+  background: #3b82f6;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.selected-badge {
+  padding: 0.5rem 1rem;
+  background: #10b981;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.add-school-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: transparent;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.add-school-btn:hover {
+  color: #3b82f6;
+}
+
+.compare-rating {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.compare-school-header {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.compare-school-header h3 {
+  margin: 0 2rem 0.5rem 0;
+}
+
+.remove-school-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ef4444;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .compare-schools-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .comparison-table,
+  .comparison-programs {
+    padding: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .comparison-table table,
+  .comparison-programs table {
+    min-width: 600px;
+  }
+
+  .comparison-table th,
+  .comparison-table td,
+  .comparison-programs th,
+  .comparison-programs td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  /* Truncate long school names in table headers */
+  .comparison-table th:not(:first-child),
+  .comparison-programs th:not(:first-child) {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Sticky first column so metric labels stay visible while scrolling */
+  .comparison-table th:first-child,
+  .comparison-table td:first-child,
+  .comparison-programs th:first-child,
+  .comparison-programs td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: #242424;
+    min-width: 140px;
+  }
+
+  .comparison-table thead th:first-child,
+  .comparison-programs thead th:first-child {
+    background: #1a1a1a;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    position: relative;
+  }
+
+  .compare-page {
+    padding: 1rem;
+  }
+
+  .compare-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .compare-schools-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .compare-school-column {
+    padding: 1rem;
+  }
+
+  .add-school-column {
+    min-height: 200px;
+  }
+
+  .compare-empty {
+    padding: 2rem 1rem;
+  }
+
+  .compare-empty h2 {
+    font-size: 1.125rem;
+  }
+
+  .comparison-table,
+  .comparison-programs {
+    padding: 0.75rem;
+    border-radius: 8px;
+  }
+
+  .comparison-table h2,
+  .comparison-programs h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Modal - full screen on small devices */
+  .modal-content {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .modal-header {
+    padding: 1rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1.125rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .school-option {
+    padding: 0.75rem;
+  }
+
+  .school-option h4 {
+    font-size: 0.875rem;
+  }
+
+  .school-option p {
+    font-size: 0.75rem;
+  }
+
+  .school-rating-compare,
+  .selected-badge {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    position: relative;
+  }
+
+  .compare-schools-container {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-table th:not(:first-child),
+  .comparison-programs th:not(:first-child) {
+    max-width: 80px;
+  }
+}

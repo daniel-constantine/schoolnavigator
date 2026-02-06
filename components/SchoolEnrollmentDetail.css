@@ -1,0 +1,12 @@
+/* Grid layout with responsive columns */
+.school-enrollment-detail-main-container-description {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .school-enrollment-detail-main-container-description {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

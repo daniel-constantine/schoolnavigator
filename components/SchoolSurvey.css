@@ -1,0 +1,59 @@
+/* Section headers for survey groups */
+.school-survey-section {
+  margin-bottom: 1.5rem;
+}
+
+.school-survey-section:last-child {
+  margin-bottom: 0;
+}
+
+.school-survey-section-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Individual survey row */
+.school-survey-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 0.625rem 1rem; */
+  border-radius: 0.5625rem;
+  /* background-color: hsl(var(--muted) / 0.5); */
+  /* margin-bottom: 0.5rem; */
+}
+
+.school-survey-row:last-child {
+  margin-bottom: 0;
+}
+
+.school-survey-label {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.school-survey-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.school-survey-value {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-variant-numeric: tabular-nums;
+  min-width: 2.5rem;
+  text-align: right;
+}
+
+.school-survey-trending {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+  min-width: 3rem;
+}

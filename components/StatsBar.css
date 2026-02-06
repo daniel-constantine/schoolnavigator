@@ -1,0 +1,33 @@
+.stats-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #333;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.stat-item svg {
+  color: #2563eb;
+}
+
+.stat-item strong {
+  color: #e5e5e5;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .stats-bar {
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,77 @@
+/* Chart container */
+.historical-trends-chart-container {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* Custom tooltip */
+.historical-trends-tooltip {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.historical-trends-tooltip-label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: hsl(var(--foreground));
+}
+
+/* Table section */
+.historical-trends-table-section {
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+}
+
+.historical-trends-table-container {
+  overflow-x: auto;
+}
+
+.historical-trends-table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* Header row */
+.historical-trends-table-header-row {
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.historical-trends-table-subject-header {
+  text-align: left;
+  padding: 0.5rem 1rem 0.5rem 0;
+  font-weight: 800;
+  color: white;
+}
+
+.historical-trends-table-year-header {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-weight: 800;
+  color: white;
+}
+
+/* Data rows */
+.historical-trends-table-row {
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.historical-trends-table-subject-cell {
+  padding: 0.5rem 1rem 0.5rem 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.historical-trends-table-value-cell {
+  text-align: center;
+  padding: 0.5rem 0.75rem;
+}

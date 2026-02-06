@@ -1,0 +1,101 @@
+/* Grid layout with responsive columns */
+.academic-performance-parent-container-main-grid {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+/* Trending indicator - unique inline-flex + cursor + color */
+.academic-performance-parent-container-main-grid-container-main-trending {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  gap: 0.125rem;
+  display: inline-flex;
+  cursor: help;
+  align-items: center;
+  color: rgb(52 211 153 / var(--tw-text-opacity, 1));
+}
+
+/* Description text with relaxed line-height */
+.academic-performance-parent-container-main-grid-container-main-description {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.625;
+  font-size: 0.75rem;
+}
+
+/* Border-top separator */
+.academic-performance-parent-container-secondary-grid {
+  padding-top: 1rem;
+  border-top-width: 1px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  margin-top: 1.5rem;
+  border-color: hsl(var(--border));
+  border-style: solid;
+}
+
+.academic-performance-parent-container-secondary-grid-table-container {
+  overflow-x: auto;
+}
+
+.academic-performance-parent-container-secondary-grid-table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.academic-performance-parent-container-secondary-grid-table-row {
+  border-bottom-width: 1px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-style: solid;
+  border-color: hsl(var(--border));
+}
+
+/* Table cells - consolidated padding */
+.academic-performance-parent-container-secondary-grid-table-row-subject,
+.academic-performance-parent-container-secondary-grid-table-row-subject-column,
+.academic-performance-parent-container-secondary-grid-table-row-subject-value {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.academic-performance-parent-container-secondary-grid-table-row-subject,
+.academic-performance-parent-container-secondary-grid-table-row-subject-column {
+  color: hsl(var(--muted-foreground));
+  padding-right: 1rem;
+}
+
+.academic-performance-parent-container-secondary-grid-table-row-subject {
+  text-align: left;
+}
+
+.academic-performance-parent-container-secondary-grid-table-row-subject-column {
+  text-align: center;
+}
+
+.academic-performance-parent-container-secondary-grid-table-row-subject-value {
+  padding-right: 1rem;
+}
+
+.academic-performance-parent-container-secondary-grid-table-row-value {
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .academic-performance-parent-container-main-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,11 @@
+.overall-snapshot-container-score-container {
+  margin-top: 0.375rem;
+  margin-bottom: 0.375rem;
+}
+
+.snapshot-container-title {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

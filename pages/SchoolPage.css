@@ -1,0 +1,877 @@
+.schoolpage-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* School Page - Dark theme matching screenshot */
+
+.school-page {
+  /* background: #0f0f0f; */
+  min-height: 100vh;
+  color: #fff;
+  max-width: 1600px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+}
+
+.school-page-loading,
+.school-page-error {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #888;
+}
+
+.school-page-spinner {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #333;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: school-page-spin 0.8s linear infinite;
+}
+
+@keyframes school-page-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.school-page-btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.school-page-btn-primary:hover {
+  background: #2563eb;
+}
+
+/* Header: breadcrumb + title + actions */
+.school-page-header {
+  background: #111;
+  border-bottom: 1px solid #222;
+  padding: 1.5rem 0;
+}
+
+.school-page-header-inner {
+  max-width: 1600px;
+  /* margin: 0 auto; */
+  padding: 0 2rem;
+}
+
+.school-page-breadcrumb {
+  font-size: 0.875rem;
+  color: #888;
+  margin-bottom: 0.75rem;
+}
+
+.school-page-breadcrumb a {
+  color: #888;
+  text-decoration: none;
+}
+
+.school-page-breadcrumb a:hover {
+  color: #fff;
+}
+
+.school-page-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.school-page-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.school-page-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.school-page-btn-save {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.school-page-btn-save:hover,
+.school-page-btn-save.saved {
+  background: #2563eb;
+}
+
+.school-page-btn-share {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.school-page-btn-share:hover {
+  background: #333;
+}
+
+/* Hero: map + key details + recommendation + overall */
+.school-page-hero {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.school-page-hero-inner {
+  /* display: grid; */
+  grid-template-columns: 1fr 340px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.school-page-hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.school-page-map-wrap {
+  height: 320px;
+  /* height: 100%; */
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #1a1a1a;
+  border: 1px solid #222;
+}
+
+.school-page-key-details {
+  gap: 8px 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* .school-page-map-wrap [data-testid="map"] {
+  height: 100%;
+  width: 100%;
+} */
+
+.school-page-address {
+  color: #aaa;
+  font-size: 0.9375rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.school-page-key-details li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* .school-page-key-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  color: #ccc;
+} */
+
+.school-page-hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.school-page-recommendation-box {
+  background: #c2410c;
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.school-page-recommendation-box h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.school-page-recommendation-score {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.school-page-link-calc {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 0.875rem;
+}
+
+.school-page-link-calc:hover {
+  color: #e0e0e0;
+}
+
+.school-page-overall-rating-box {
+  text-align: center;
+  padding: 1rem;
+}
+
+.school-page-overall-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.school-page-overall-circle.score-green {
+  background: #166534;
+  color: #fff;
+}
+
+.school-page-overall-circle.score-yellow {
+  background: #a16207;
+  color: #fff;
+}
+
+.school-page-overall-circle.score-purple {
+  background: #6b21a8;
+  color: #fff;
+}
+
+.school-page-overall-circle.score-red {
+  background: #b91c1c;
+  color: #fff;
+}
+
+.school-page-overall-circle.score-gray {
+  background: #374151;
+  color: #fff;
+}
+
+.school-page-overall-label {
+  font-size: 0.875rem;
+  color: #888;
+}
+
+/* Sections */
+.school-page-section {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #111;
+  border-radius: 12px;
+  border: 1px solid #222;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+.school-page-section:first-of-type {
+  margin-top: 0;
+}
+
+.school-page-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 1.5rem; */
+}
+
+.school-page-section h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+.school-page-btn-link {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9375rem;
+}
+
+.school-page-btn-link.small {
+  font-size: 0.875rem;
+}
+
+.school-page-btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Overall Ratings grid - 4 circles */
+.school-page-ratings-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.school-page-rating-circle-card {
+  text-align: center;
+  padding: 1.5rem;
+  background: #0a0a0a;
+  border-radius: 12px;
+  border: 1px solid #222;
+  position: relative;
+}
+
+.school-page-rating-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.school-page-rating-pct {
+  font-size: 1rem;
+  margin-left: 1px;
+}
+
+.school-page-rating-circle-card .school-page-rating-circle.score-green {
+  background: #166534;
+  color: #fff;
+}
+
+.school-page-rating-circle-label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.school-page-rating-avg {
+  font-size: 0.8125rem;
+  color: #888;
+}
+
+.school-page-trend-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #10b981;
+}
+
+/* What Teachers & Parents Say */
+.school-page-sentiment-intro {
+  color: #aaa;
+  margin-bottom: 1.25rem;
+  font-size: 0.9375rem;
+}
+
+.school-page-sentiment-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.school-page-sentiment-bar {
+  display: grid;
+  grid-template-columns: 100px 1fr 50px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.school-page-sentiment-track {
+  height: 24px;
+  background: #222;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.school-page-sentiment-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.school-page-sentiment-fill.positive {
+  background: #10b981;
+}
+
+.school-page-sentiment-fill.neutral {
+  background: #6b7280;
+}
+
+.school-page-sentiment-fill.negative {
+  background: #ef4444;
+}
+
+.school-page-review-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.school-page-review-card {
+  padding: 1.25rem;
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 8px;
+}
+
+.school-page-review-card-score {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #10b981;
+  margin-bottom: 0.5rem;
+}
+
+.school-page-review-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9375rem;
+}
+
+.school-page-review-card p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #888;
+}
+
+/* Academic Performance */
+.school-page-academic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.school-page-academic-card {
+  padding: 1.25rem;
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.school-page-academic-label {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.school-page-academic-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.school-page-academic-value.green {
+  color: #10b981;
+}
+
+.school-page-table-caption {
+  margin: 1.5rem 0 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.school-page-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.school-page-table th,
+.school-page-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #222;
+}
+
+.school-page-table th {
+  color: #888;
+  font-weight: 600;
+}
+
+.school-page-table td.green {
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* Teacher & Staff */
+.school-page-teacher-stats {
+  margin-bottom: 1.5rem;
+}
+
+.school-page-teacher-stats p {
+  margin: 0 0 0.5rem 0;
+  color: #ccc;
+}
+
+.school-page-teacher-finance {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.school-page-teacher-finance-item {
+  padding: 1rem;
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 8px;
+}
+
+.school-page-teacher-finance-label {
+  font-size: 0.875rem;
+  color: #888;
+  margin-bottom: 0.25rem;
+}
+
+.school-page-teacher-finance-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.school-page-teacher-finance-value.green {
+  color: #10b981;
+}
+
+/* Historical Trends */
+.school-page-chart-placeholder {
+  height: 200px;
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* NYC School Survey */
+.school-page-survey-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.school-page-survey-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #222;
+}
+
+.school-page-survey-row:last-child {
+  border-bottom: none;
+}
+
+.school-page-survey-value.green {
+  color: #10b981;
+  font-weight: 700;
+}
+
+/* School Details grid */
+.school-page-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 2rem;
+}
+
+.school-page-detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #222;
+}
+
+.school-page-detail-item span:first-child {
+  color: #888;
+}
+
+/* Student Demographics */
+.school-page-demographics-intro {
+  color: #aaa;
+  margin-bottom: 1rem;
+  font-size: 0.9375rem;
+}
+
+.school-page-demographics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.school-page-demographic-card {
+  padding: 1rem;
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.school-page-demographic-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.school-page-demographic-pct {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.school-page-demographic-label {
+  font-size: 0.875rem;
+  color: #aaa;
+}
+
+.school-page-demographic-count {
+  font-size: 0.8125rem;
+  color: #666;
+}
+
+/* Other schools in district */
+.school-page-nearby-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.school-page-nearby-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s;
+}
+
+.school-page-nearby-item:hover {
+  background: #1a1a1a;
+}
+
+.school-page-nearby-item h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.school-page-nearby-item p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #888;
+}
+
+.school-page-nearby-rating.green {
+  font-weight: 700;
+  color: #10b981;
+}
+
+.school-page-muted {
+  color: #666;
+}
+
+.school-page-muted a {
+  color: #3b82f6;
+}
+
+/* FAQ */
+.school-page-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.school-page-faq-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.school-page-faq-item:hover {
+  background: #151515;
+}
+
+/* Leave a Review */
+.school-page-review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 560px;
+}
+
+.school-page-stars {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.school-page-star-btn {
+  background: none;
+  border: none;
+  color: #fbbf24;
+  cursor: pointer;
+  padding: 0;
+}
+
+.school-page-star-btn:hover {
+  color: #fcd34d;
+}
+
+.school-page-input,
+.school-page-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #0a0a0a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.school-page-input::placeholder,
+.school-page-textarea::placeholder {
+  color: #666;
+}
+
+.school-page-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.school-page-review-form .school-page-btn-primary {
+  align-self: flex-start;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .school-page-hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .school-page-ratings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .school-page-review-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .school-page-academic-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .school-page-header-inner,
+  .school-page-hero,
+  .school-page-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .school-page-title-row {
+    flex-direction: column;
+  }
+
+  .school-page-title {
+    font-size: 1.5rem;
+  }
+
+  .school-page-ratings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .school-page-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .school-page-map-wrap {
+    height: 240px;
+  }
+
+  .school-page .react-tabs__tab {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+}
+
+/* React Tabs overrides */
+.school-page .react-tabs__tab-list {
+  display: flex;
+  border-bottom: 1px solid #333;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.school-page .react-tabs__tab {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  color: #888;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.school-page .react-tabs__tab--selected {
+  color: #fff;
+  background: none;
+  border-color: transparent;
+  border-bottom: 2px solid #3b82f6;
+  border-radius: 0;
+}
+
+.school-page .react-tabs__tab:focus::after {
+  display: none;
+}

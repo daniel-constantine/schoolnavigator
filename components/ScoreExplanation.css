@@ -1,0 +1,98 @@
+.score-explanation-main-formula-container-explanation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* Badge components - consolidated padding */
+.score-explanation-main-formula-container-explanation-overall,
+.score-explanation-main-formula-container-explanation-test,
+.score-explanation-main-formula-container-explanation-climate,
+.score-explanation-main-formula-container-explanation-progress {
+  font-family: var(--font-mono);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.score-explanation-main-formula-container-explanation-overall {
+  background-color: hsl(var(--background) / 1);
+  border-radius: 0.25rem;
+  border-width: 1px;
+}
+
+.score-explanation-main-formula-container-explanation-test {
+  color: rgb(147 197 253);
+  background-color: #1e3a8a4d;
+}
+
+.score-explanation-main-formula-container-explanation-climate {
+  color: rgb(134 239 172);
+  background-color: #14532d4d;
+}
+
+.score-explanation-main-formula-container-explanation-progress {
+  color: rgb(216 180 254);
+  background-color: #581c874d;
+}
+
+/* Detail sections with left border accent */
+.score-explanation-main-detail-container-test,
+.score-explanation-main-detail-container-progress,
+.score-explanation-main-detail-container-climate {
+  padding-left: 0.75rem;
+  border-width: 0;
+  border-left-width: 4px;
+  border-style: solid;
+}
+
+.score-explanation-main-detail-container-test {
+  border-color: rgb(59 130 246);
+}
+
+.score-explanation-main-detail-container-progress,
+.score-explanation-main-detail-container-climate {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.score-explanation-main-detail-container-progress {
+  border-color: rgb(34 197 94);
+}
+
+.score-explanation-main-detail-container-climate {
+  border-color: rgb(168 85 247);
+}
+
+/* Consolidated text styles */
+.score-explanation-main-detail-container-content,
+.score-explanation-main-detail-container-content-secondary,
+.score-explanation-main-detail-container-data-source {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.score-explanation-main-detail-container-content-secondary {
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
+.score-explanation-main-detail-container-data-source {
+  padding-top: 0.5rem;
+  border-top-width: 1px;
+}
+
+.score-explanation-main-detail-container-data-source p {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.score-explanation-main-detail-container-data-source ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}

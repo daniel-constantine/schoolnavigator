@@ -1,0 +1,165 @@
+/* Custom spacing for sections - 1.5rem gap not in utilities */
+.admission-sections-gap {
+  gap: 1.5rem;
+}
+
+.admission-grade-section {
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  /* background-color: hsl(var(--card)); */
+  border: 1px solid hsl(var(--border));
+}
+
+/* Badge component - custom padding and styles */
+.admission-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.admission-badge.very-competitive {
+  background-color: #7f1d1d4d;
+  color: rgb(252 165 165);
+  border-color: rgb(185 28 28);
+}
+
+.admission-badge.competitive {
+  color: rgb(252 211 77);
+  background-color: #78350f4d;
+  border-color: rgb(180 83 9);
+}
+
+.admission-badge.moderate {
+  background-color: #713f124d;
+  border-color: rgb(161 98 7);
+  color: rgb(253 224 71);
+}
+
+.admission-badge.accessible {
+  /* background-color: hsl(142, 70%, 95%); */
+  background-color: #14532d4d;
+  color: rgb(134 239 172);
+  border-color: rgb(21 128 61);
+}
+
+/* Metrics grid - 4 column layout */
+.admission-metrics {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.admission-metric {
+  text-align: left;
+}
+
+/* Large metric value - custom size not in utilities */
+.admission-metric-value {
+  /* font-size: 1.875rem; */
+  color: hsl(var(--foreground));
+}
+
+.admission-fill-rate-icon {
+  font-size: 1rem;
+}
+
+/* Info section - custom spacing */
+.admission-info-section {
+  /* margin-top: 2rem; */
+  /* padding-top: 1.5rem; */
+  margin-top: 1.5rem;
+  /* margin-left: 1rem;
+  margin-right: 1rem; */
+}
+
+.admission-info-section:hover {
+  /* margin-top: 2rem; */
+  /* background-color: hsl(var(--muted) / 0.5); */
+}
+
+.admission-info-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  color: hsl(var(--foreground));
+  cursor: pointer;
+  border-width: 0px;
+  border-radius: 9px;
+  padding: 1rem;
+}
+
+.admission-info-toggle:hover {
+  color: hsl(var(--primary));
+  background-color: hsl(var(--muted) / 0.5);
+}
+
+/* Custom gap for info content - 1.5rem not in utilities */
+.admission-info-gap {
+  margin-top: 1rem;
+  gap: 1.5rem;
+  background-color: hsl(var(--muted) / 0.5);
+  padding: 1rem;
+  border-radius: 9px;
+}
+
+/* Custom text size for info - 0.8125rem not standard */
+.admission-info-text {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.admission-info-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.admission-info-list-item {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.source-data {
+  border-top: 1px;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-color: var(--border);
+  border-style: solid;
+}
+
+.source-data a {
+  text-decoration: none;
+  color: hsl(var(--primary));
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .admission-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admission-metric-value {
+    font-size: 1.5rem;
+  }
+
+  /* Override flex header on mobile */
+  .admission-grade-section .flex.justify-between {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admission-metrics {
+    grid-template-columns: 1fr;
+  }
+}

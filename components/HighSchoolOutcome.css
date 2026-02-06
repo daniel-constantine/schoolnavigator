@@ -1,0 +1,131 @@
+/* Grid layout with responsive columns */
+.graduation-grid {
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  display: grid;
+}
+
+/* Graduation number - unique color */
+.graduation-grid-container-number {
+  color: rgb(52 211 153);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Description with relaxed line-height + tw spacing vars */
+.graduation-grid-container-description {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+  --tw-text-opacity: 1;
+  color: hsl(var(--muted-foreground) / var(--tw-text-opacity, 1));
+  line-height: 1.625;
+  font-size: 0.75rem;
+}
+
+/* SAT section - unique opacity */
+.sat-performance-container {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: 1.5rem;
+  opacity: 0.6;
+}
+
+.sat-performance-container-header-title-disclaimer-title {
+  --tw-text-opacity: 1;
+  color: rgb(252 211 77 / var(--tw-text-opacity, 1));
+  background-color: #78350f4d;
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  --tw-bg-opacity: 1;
+  border-width: 1px;
+  border-radius: 0.375rem;
+  white-space: nowrap;
+  align-items: center;
+  display: inline-flex;
+}
+
+.sat-performance-container-header-title-disclaimer-content {
+  background-color: #78350f33;
+  --tw-border-opacity: 1;
+  border-color: rgb(146 64 14 / var(--tw-border-opacity, 1));
+  padding: 0.75rem;
+  border-width: 1px;
+  border-radius: 0.5625rem;
+  margin-bottom: 0.75rem;
+}
+
+.sat-performance-container-header-title-disclaimer-text {
+  --tw-text-opacity: 1;
+  color: rgb(252 211 77 / var(--tw-text-opacity, 1));
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.sat-performance-container-main {
+  gap: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sat-performance-container-main-content {
+  text-align: center;
+  padding: 0.75rem;
+  background-color: hsl(var(--muted) / 0.5);
+  border-radius: 0.5625rem;
+}
+
+/* Specialized HS styles - all unique */
+.specialized-hs-container {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+  background-color: #312e8133;
+  --tw-border-opacity: 1;
+  border-color: rgb(55 48 163 / var(--tw-border-opacity, 1));
+  padding: 1rem;
+  border-width: 1px;
+  border-radius: 0.5625rem;
+  border-style: solid;
+}
+
+.specialized-hs-container-content {
+  gap: 0.75rem;
+  align-items: flex-start;
+  display: flex;
+}
+
+.specialized-hs-container-text {
+  color: rgb(199 210 254 / var(--tw-text-opacity, 1));
+  font-weight: 500;
+}
+
+.specialized-hs-container-explanation {
+  color: rgb(165 180 252 / var(--tw-text-opacity, 1));
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .graduation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sat-performance-container-main {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

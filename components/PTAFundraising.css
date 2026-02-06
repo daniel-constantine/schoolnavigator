@@ -1,0 +1,38 @@
+.pta-fundraising-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.pta-fundraising-stat {
+  padding: 1rem;
+  border-radius: 0.5625rem;
+  background-color: hsl(var(--muted) / 0.5);
+}
+
+.pta-fundraising-value {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pta-fundraising-label {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: hsl(var(--muted-foreground));
+  margin-top: 0.25rem;
+}
+
+.pta-fundraising-source {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: hsl(var(--muted-foreground));
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .pta-fundraising-columns {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

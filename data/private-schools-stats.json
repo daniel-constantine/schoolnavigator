@@ -1,0 +1,22 @@
+{
+	"totalSchools": 623,
+	"byBorough": {
+		"Brooklyn": 198,
+		"Manhattan": 163,
+		"Queens": 180,
+		"Bronx": 56,
+		"Staten Island": 26
+	},
+	"byReligiousAffiliation": {
+		"Non-Religious": 71,
+		"Catholic": 18,
+		"Other Religious": 26
+	},
+	"byCoedStatus": {
+		"coed": 452,
+		"female": 78,
+		"male": 93
+	},
+	"avgEnrollment": 280,
+	"avgStudentTeacherRatio": 10
+}

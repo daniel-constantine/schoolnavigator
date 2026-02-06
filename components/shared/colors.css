@@ -1,0 +1,59 @@
+/* Shared color indicators used across components */
+.color-indicator {
+  border-radius: 9999px;
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
+.color-indicator.green,
+.color-dot-green {
+  background-color: rgb(16 185 129);
+}
+
+.color-indicator.yellow,
+.color-dot-yellow {
+  background-color: rgb(234 179 8);
+}
+
+.color-indicator.red,
+.color-dot-red {
+  background-color: rgb(239 68 68);
+}
+
+.color-indicator.gray,
+.color-dot-gray {
+  background-color: rgb(156 163 175);
+}
+
+/* Color classes for text and backgrounds */
+.green-hb {
+  color: rgb(16 185 129);
+}
+
+.yellow-hb {
+  color: rgb(234 179 8);
+}
+
+.red-hb {
+  color: rgb(239 68 68);
+}
+
+.gray-hb {
+  color: rgb(156 163 175);
+}
+
+.bg-green-hb {
+  background-color: rgb(16 185 129);
+}
+
+.bg-yellow-hb {
+  background-color: rgb(234 179 8);
+}
+
+.bg-red-hb {
+  background-color: rgb(239 68 68);
+}
+
+.bg-gray-hb {
+  background-color: rgb(156 163 175);
+}
